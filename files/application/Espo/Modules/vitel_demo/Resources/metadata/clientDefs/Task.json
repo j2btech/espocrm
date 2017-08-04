@@ -1,0 +1,66 @@
+{
+   "controller": "controllers/record",
+   "recordViews":{
+      "list": "crm:views/task/record/list",
+      "detail": "vitel:views/task/record/detail",
+      "edit":"vitel:views/task/record/edit",
+      "editSmall":"vitel:views/task/record/edit-small"
+   },
+   "views": {
+      "list": "crm:views/task/list",
+      "detail": "crm:views/task/detail"
+   },
+   "dynamicLogic": {
+      "fields": {
+         "dateCompleted": {
+            "visible": {
+               "conditionGroup": [
+                  {
+                     "type": "equals",
+                     "attribute": "status",
+                     "value": "Completed"
+                  }
+               ]
+            }
+         },
+         "reminders": {
+            "visible": {
+               "conditionGroup": [
+                  {
+                     "type": "and",
+                     "value": [
+                        {
+                           "type": "isNotEmpty",
+                           "attribute": "dateEnd"
+                        },
+                        {
+                           "type": "isEmpty",
+                           "attribute": "dateEndDate"
+                        }
+                     ]
+                  }
+
+               ]
+            }
+         }
+      }
+   },
+   "filterList": [
+      "actual",
+      {
+         "name":"completed",
+         "style": "success"
+      },
+      {
+         "name":"todays"
+      },
+      {
+         "name":"overdue",
+         "style": "danger"
+      },
+      {
+         "name":"deferred"
+      }
+   ],
+   "boolFilterList": ["onlyMy"]
+}
