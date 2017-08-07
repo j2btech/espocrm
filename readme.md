@@ -1,3 +1,3 @@
-#Tests EspoCRM
+# Tests EspoCRM
 
-Versión base de pruebas realizadas con EspoCRM
+Branch para hacer pruebas de concepto sobre EspoCRM.

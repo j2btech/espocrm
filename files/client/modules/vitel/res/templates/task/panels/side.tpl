@@ -7,6 +7,6 @@
         </div>
     </div>
     {{/each}}
-    <p><a href="https://projects.invisionapp.com/share/RXCDEJZMP#/screens/241957286"><button class="btn btn-primary-action" type="button" style="width:100%">Generar Cotizaci&oacute;n</button></a></p>
-    <p><a href="#"><button class="btn btn-primary-action" type="button" style="width:100%">Responder</button></a></p>
+    <p><button class="btn btn-primary-action" type="button" style="width:100%" data-action="quotate">Generar Cotizaci&oacute;n</button></p>
+    <p><button class="btn btn-primary-action" type="button" style="width:100%" data-action="response">Responder</button></p>
 </div>
